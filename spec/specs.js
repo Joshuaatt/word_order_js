@@ -8,6 +8,10 @@ describe('wordOrder', function() {
   });
 
   it('takes three words, two the same, and returns two words in the order of frequency', function() {
-    expect(wordOrder('hello world world'))to.eql('world', 'hello');
+    expect(wordOrder('hello world world')).to.eql(['world', 'hello']);
+  });
+
+  it('takes many words and returns them in order of frequency', function() {
+    expect(wordOrder('a a b d d d d d d k')).to.eql(['d', 'a', 'b', 'k']);
   });
 });
